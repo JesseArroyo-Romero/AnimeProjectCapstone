@@ -2,7 +2,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('comments/', views.CommentsList.as_view()),
-    path('comments/<int:pk>/', views.CommentsDetail.as_view()),
-    path('animes_comments/<str:animes_id>/', views.animes_comments())
+    path('', views.CommentsList.as_view()),
+    path('<int:pk>/', views.CommentsDetail.as_view()),
+    path('anime/<int:anime_id>/', views.CommentsByAnimeId.as_view()),
 ]
